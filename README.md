@@ -27,7 +27,8 @@ const myComponent = () => {
 # props
 * **activeScale**: The scale in which the button will aniamte be when pressed.
 * **onPress**: The function to be called when pressing the button. to be added
-* **springConfig**: Spring config for the animation. defaults to ```{
+* **springConfig**: Spring config for the animation. defaults to
+```{
     damping: 10,
     mass: 1,
     stiffness: 200,
