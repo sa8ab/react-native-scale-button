@@ -2,7 +2,7 @@
 
 Touchable scale using gesture handler and reanimated V2
 
-[Demo Gif](https://i.imgur.com/Z9ArxgC.gif)
+![Demo Gif](https://i.imgur.com/Z9ArxgC.gif)
 
 # instalation
 
