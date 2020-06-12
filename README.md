@@ -25,14 +25,15 @@ const myComponent = () => {
 ```
 
 # props
-* **activeScale**: The scale in which the button will aniamte be when pressed.
+* **activeScale**: The scale in which the button will animte be when pressed.
 * **onPress**: The function to be called when pressing the button. to be added
 * **springConfig**: Spring config for the animation. defaults to
-```{
+```
+{
     damping: 10,
     mass: 1,
     stiffness: 200,
   }
-  ```
-* **contentContainerStyle**: Style for the View element containing the children
+```
+* **contentContainerStyle**: Style for the View element containing the children.
 * **handlerProps**: type object. LongPressGestureHandler props, whatever you put here will be applied to LongPressGestureHandler imported from react-native-gesture-handler
