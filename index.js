@@ -1,5 +1,4 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -8,12 +7,17 @@ import Animated, {
 } from "react-native-reanimated";
 import { LongPressGestureHandler } from "react-native-gesture-handler";
 
-const App = ({
+const ScaleButton = ({
+  children,
   activeScale = 0.9,
   springConfig = {
-    damping: 15,
+    damping: 10,
     mass: 1,
     stiffness: 200,
+  },
+  contentContainerStyle,
+  handlerProps = {
+    maxDist: 50,
   },
 }) => {
   const scale = useSharedValue(1);
@@ -40,36 +44,17 @@ const App = ({
   });
 
   return (
-    <View style={s.container}>
-      <LongPressGestureHandler
-        minDurationMs={0.5}
-        maxDist={50}
-        // shouldCancelWhenOutside
-        onGestureEvent={gestureHandler}
-      >
-        <Animated.View style={sz}>
-          <Text style={s.text}>Touchable Scale</Text>
-        </Animated.View>
-      </LongPressGestureHandler>
-    </View>
+    <LongPressGestureHandler
+      {...handlerProps}
+      minDurationMs={0.5}
+      // shouldCancelWhenOutside
+      onGestureEvent={gestureHandler}
+    >
+      <Animated.View style={[sz, contentContainerStyle]}>
+        {children}
+      </Animated.View>
+    </LongPressGestureHandler>
   );
 };
 
-const s = StyleSheet.create({
-  container: {
-    backgroundColor: "#dcdde1",
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    backgroundColor: "#282828",
-    padding: 10,
-    color: "white",
-    borderRadius: 10,
-    elevation: 4,
-    fontSize: 25,
-  },
-});
-
-export default App;
+export default ScaleButton;
