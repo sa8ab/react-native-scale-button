@@ -1,6 +1,6 @@
 {
   "name": "react-native-scale-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scale button using gesture handler and reanimated2",
   "main": "index.js",
   "scripts": {

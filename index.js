@@ -1,4 +1,5 @@
 import React from "react";
+import { View, StyleSheet } from "react-native";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -9,6 +10,7 @@ import { LongPressGestureHandler } from "react-native-gesture-handler";
 
 const ScaleButton = ({
   children,
+  onPress = () => {},
   activeScale = 0.9,
   springConfig = {
     damping: 10,
@@ -16,9 +18,7 @@ const ScaleButton = ({
     stiffness: 200,
   },
   contentContainerStyle,
-  handlerProps = {
-    maxDist: 50,
-  },
+  handlerProps,
 }) => {
   const scale = useSharedValue(1);
   const sz = useAnimatedStyle(() => {
@@ -39,15 +39,16 @@ const ScaleButton = ({
       scale.value = 1;
     },
     onEnd: () => {
+      onPress();
       scale.value = 1;
     },
   });
 
   return (
     <LongPressGestureHandler
-      {...handlerProps}
       minDurationMs={0.5}
-      // shouldCancelWhenOutside
+      maxDist={10}
+      {...handlerProps}
       onGestureEvent={gestureHandler}
     >
       <Animated.View style={[sz, contentContainerStyle]}>
@@ -56,5 +57,7 @@ const ScaleButton = ({
     </LongPressGestureHandler>
   );
 };
+
+const s = StyleSheet.create();
 
 export default ScaleButton;
