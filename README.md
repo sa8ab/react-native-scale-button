@@ -5,7 +5,7 @@ Touchable scale using gesture handler and reanimated V2
 ![Demo Gif](https://i.imgur.com/Z9ArxgC.gif)
 
 # instalation
-
+`npm i react-native-scale-button`
 **This package uses react-native-reanimated 2 and react-native-gesture-handler so make sure you have both installed**
 [Reanimated v2 instalation](https://docs.swmansion.com/react-native-reanimated/docs/installation#installing-the-package),
 [Gesture Handler instalation](https://docs.swmansion.com/react-native-gesture-handler/docs/getting-started.html#installation).
