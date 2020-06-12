@@ -2,6 +2,8 @@
 
 Touchable scale using gesture handler and reanimated V2
 
+[Demo Gif](https://i.imgur.com/Z9ArxgC.gif)
+
 # instalation
 
 **This package uses react-native-reanimated 2 and react-native-gesture-handler so make sure you have both installed**
