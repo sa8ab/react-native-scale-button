@@ -1,0 +1,25 @@
+{
+  "name": "react-native-scale-button",
+  "version": "1.0.0",
+  "description": "Scale button using gesture handler and reanimated2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sa8ab/react-native-scale-button.git"
+  },
+  "keywords": [
+    "scale-button"
+  ],
+  "author": "sa8ab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sa8ab/react-native-scale-button/issues"
+  },
+  "homepage": "https://github.com/sa8ab/react-native-scale-button#readme",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.59.0"
+  }
+}
